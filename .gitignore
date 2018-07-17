@@ -11,6 +11,9 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+.project
+.pydevproject
+.settings
 
 # Build results
 [Dd]ebug/
