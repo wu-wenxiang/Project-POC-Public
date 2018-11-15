@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="UFileClient.Display.ExplorerImage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Thumbs="clr-namespace:UFileClient.Display;assembly=UFileThumbnailsDisplay"
+    xmlns:Image="clr-namespace:UFileClient.Display;assembly=UFileImageDisplayB"
+             Name="containerCtrl" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="thumbnailColumn" Width="180"/>
+            <ColumnDefinition Name="splitterColumn" Width="3"/>
+            <ColumnDefinition Name="imageColumn" Width="*" />
+        </Grid.ColumnDefinitions>
+        <Thumbs:ThumbnailImage Grid.Column="0" Name="thumbs" VerticalAlignment="Stretch" />
+        <GridSplitter Grid.Column="1" Width="3" ResizeBehavior="PreviousAndNext"/>
+        <Image:SingleImage Grid.Column="2" Name="images" HorizontalAlignment="Stretch" />
+    </Grid>
+</UserControl>

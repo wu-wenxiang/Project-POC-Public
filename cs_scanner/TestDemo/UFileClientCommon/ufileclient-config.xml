@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ufileclient_config>
+  <maxImageSize>1024</maxImageSize>
+  <BatchCountLimit>400</BatchCountLimit>
+  <MassFileSizeLimit>1024</MassFileSizeLimit>
+  <GTPFolder>C:/gtp</GTPFolder>
+  <IsZiped>1</IsZiped>
+  <scannerList>
+    <scanner>
+      <scannerName>KODAK Scanner: i1210/i1220</scannerName>
+      <scannerCap>
+        <CAP_DUPLEXENABLED Itemtype="Bool" Item="1" />
+        <ICAP_BRIGHTNESS Itemtype="Fix32" Item="0" />
+        <ICAP_AUTOMATICBORDERDETECTION Itemtype="Bool" Item="1" />
+        <ICAP_PIXELFLAVOR Itemtype="UInt16" Item="0" />
+        <ICAP_XRESOLUTION Itemtype="Fix32" Item="200" />
+        <ICAP_AUTODISCARDBLANKPAGES Itemtype="Null" Item="0" />
+        <ICAP_CONTRAST Itemtype="Fix32" Item="0" />
+        <ICAP_XferMech Itemtype="UInt16" Item="1" />
+        <ICAP_PixelType Itemtype="UInt16" Item="2" />
+        <ICAP_COMPRESSION Itemtype="UInt16" Item="6" />
+        <ICAP_AUTOMATICDESKEW Itemtype="Bool" Item="1" />
+        <ICAP_IMAGEFILEFORMAT Itemtype="UInt16" Item="4" />
+      </scannerCap>
+    </scanner>
+    <scanner>
+      <scannerName>Canon DR-2510C TWAIN</scannerName>
+      <scannerCap>
+        <ICAP_PixelType Itemtype="UInt16" Item="2" />
+        <ICAP_COMPRESSION Itemtype="UInt16" Item="0" />
+        <ICAP_AUTOMATICDESKEW Itemtype="Bool" Item="1" />
+        <ICAP_AUTOMATICBORDERDETECTION Itemtype="Bool" Item="1" />
+        <ICAP_CONTRAST Itemtype="Fix32" Item="0" />
+        <ICAP_BRIGHTNESS Itemtype="Fix32" Item="0" />
+        <ICAP_THRESHOLD Itemtype="Fix32" Item="128" />
+        <ICAP_PIXELFLAVOR Itemtype="UInt16" Item="0" />
+        <ICAP_IMAGEFILEFORMAT Itemtype="UInt16" Item="2" />
+        <ICAP_XRESOLUTION Itemtype="Fix32" Item="200" />
+        <CAP_DUPLEXENABLED Itemtype="Bool" Item="1" />
+        <ICAP_AUTODISCARDBLANKPAGES Itemtype="Null" Item="0" />
+        <ICAP_XferMech Itemtype="UInt16" Item="0" />
+      </scannerCap>
+    </scanner>
+    <scanner>
+      <scannerName>Canon DR-M140 TWAIN</scannerName>
+      <scannerCap>
+        <ICAP_PixelType Itemtype="UInt16" Item="2" />
+        <ICAP_COMPRESSION Itemtype="UInt16" Item="6" />
+        <ICAP_AUTOMATICDESKEW Itemtype="Bool" Item="1" />
+        <ICAP_AUTOMATICBORDERDETECTION Itemtype="Bool" Item="1" />
+        <ICAP_CONTRAST Itemtype="Fix32" Item="0" />
+        <ICAP_BRIGHTNESS Itemtype="Fix32" Item="0" />
+        <ICAP_THRESHOLD Itemtype="Fix32" Item="127" />
+        <ICAP_PIXELFLAVOR Itemtype="UInt16" Item="0" />
+        <ICAP_IMAGEFILEFORMAT Itemtype="UInt16" Item="4" />
+        <ICAP_XRESOLUTION Itemtype="Fix32" Item="200" />
+        <CAP_DUPLEXENABLED Itemtype="Bool" Item="1" />
+        <ICAP_AUTODISCARDBLANKPAGES Itemtype="Int32" Item="0" />
+        <ICAP_XferMech Itemtype="UInt16" Item="1" />
+      </scannerCap>
+    </scanner>
+  </scannerList>
+  <ADSSerList>
+    <ADSSer>
+      <BranchId>2</BranchId>
+      <AdsAddress>10.235.35.22:80</AdsAddress>
+      <F5Address>10.235.143.47:80</F5Address>
+    </ADSSer>
+    <ADSSer>
+      <BranchId>110000001</BranchId>
+      <AdsAddress>10.230.160.43:9080</AdsAddress>
+      <F5Address>10.235.143.47:80</F5Address>
+    </ADSSer>
+  </ADSSerList>
+  <ADSUrl>http://{0}/ADS/BA_FMS/FileService?wsdl</ADSUrl>
+  <ADSSimpleUrl>http://{0}/ADS/BA_FMS/FileServiceSimple?wsdl</ADSSimpleUrl>
+  <FSSUrl>http://{0}/FSS/BA_FMS/FileService?wsdl</FSSUrl>
+  <FSSSimpleUrl>http://{0}/FSS/BA_FMS/FileServiceSimple?wsdl</FSSSimpleUrl>
+  <defaultScannerName>Canon DR-M140 TWAIN</defaultScannerName>
+  <singleImageWindow left="0" top="0" width="1600" height="870" />
+  <SendTimeOut>180</SendTimeOut>
+</ufileclient_config>

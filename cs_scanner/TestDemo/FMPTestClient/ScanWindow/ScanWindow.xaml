@@ -1,0 +1,14 @@
+﻿<Window x:Class="FMPTestClient.Scan.ScanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:scan="clr-namespace:UFileClient.Twain;assembly=UFileImageScan"
+        Title="扫描窗口" 
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        Height="208" 
+        Width="450"
+        scan:TwainScan.Unloaded="Window_Unloaded">
+    <Grid>
+        <scan:TwainScan Name="scanCtl" Margin="0,0,0,0" ScanCompleted="Window_ScanCompleted" ScanCanceled="scanCtl_ScanCanceled"/>
+    </Grid>
+</Window>

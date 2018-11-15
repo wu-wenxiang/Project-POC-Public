@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net-net-1.0"/>
+  </configSections>
+
+  <log4net>
+
+    <root>
+      <level value="ERROR" />
+      <appender-ref ref="RollingLogFileAppender" />
+    </root>
+
+    <logger name="IACLogger">
+      <level value="DEBUG" />
+    </logger>
+
+    <logger name="MessageLogger">
+      <level value="DEBUG" />
+      <appender-ref ref="MessageAppender" />
+    </logger>
+
+    <logger name="LoadAndUnLoadLogger">
+      <level value="DEBUG" />
+      <appender-ref ref="LoadAndUnLoadAppender" />
+    </logger>
+
+    <appender name="FileAppender" type="log4net.Appender.FileAppender">
+      <file value=".\IASP\IAC\log\IAC.log" />
+      <appendToFile value="true" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message		%l%newline" />
+      </layout>
+    </appender>
+    <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <file value=".\IASP\IAC\log\IAC.log" />
+      <appendToFile value="true" />
+      <MaximumFileSize value="2MB" />
+      <RollingStyle value="Size" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message		%l%newline" />
+      </layout>
+    </appender>
+    <appender name="MessageAppender" type="log4net.Appender.RollingFileAppender">
+      <file value=".\IASP\IAC\log\MessageAppender.log" />
+      <appendToFile value="true" />
+      <MaximumFileSize value="2MB" />
+      <RollingStyle value="Size" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message		%l%newline" />
+      </layout>
+    </appender>
+    <appender name="LoadAndUnLoadAppender" type="log4net.Appender.RollingFileAppender">
+      <file value=".\IASP\IAC\log\LoadAndUnLoadAppender.log" />
+      <appendToFile value="true" />
+      <MaximumFileSize value="2MB" />
+      <RollingStyle value="Size" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message		%l%newline " />
+      </layout>
+    </appender>
+    <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" >
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%date{yyyy-MM-dd HH:mm:ss} %-5p %class %m		%l%n" />
+      </layout>
+    </appender>
+  </log4net>
+</configuration>
+

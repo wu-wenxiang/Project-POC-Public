@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sys_config>
+  <Directories>
+    <imagePath>images</imagePath>
+    <configPath>config</configPath>
+    <gtpPath>gtp</gtpPath>
+    <logPath>log</logPath>
+    <downloadFilePath>downloadPath</downloadFilePath>
+    <tempaltePath>template</tempaltePath>
+  </Directories>
+  <cacheUrlFormat></cacheUrlFormat>
+  <cacheUrlFormatEx></cacheUrlFormatEx>
+  <aissUrlFormat></aissUrlFormat>
+  <aissUrlFormatEx></aissUrlFormatEx>
+  <sliceUrlFormat></sliceUrlFormat>
+  <sliceBatchUrlFormat></sliceBatchUrlFormat>
+  <ircsUrlFormat></ircsUrlFormat>
+  <acsBranchUrlFormat></acsBranchUrlFormat>
+  <acsUrlFormat></acsUrlFormat>
+  <acsBranchUrlFormatEx></acsBranchUrlFormatEx>
+  <acsUrlFormatEx></acsUrlFormatEx>
+</sys_config>

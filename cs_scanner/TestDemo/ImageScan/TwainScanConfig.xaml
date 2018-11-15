@@ -1,0 +1,153 @@
+﻿<Window x:Class="UFileClient.Twain.ScanConfig"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ScanConfig" Height="200" Width="505" ResizeMode="NoResize"
+       >
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Label VerticalAlignment="Center" Foreground="Black">亮度</Label>
+            </Grid>
+            <Grid Grid.Column="1">
+                <ComboBox Name="ICAP_BRIGHTNESS"  Width="60" Height="20" Foreground="Black" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Label VerticalAlignment="Center" Foreground="Black">对比度</Label>
+            </Grid>
+            <Grid Grid.Column="3">
+                <ComboBox Name="ICAP_CONTRAST"  Width="60" Height="20" Foreground="Black" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="4">
+                <Label VerticalAlignment="Center" Foreground="Black">分辨率</Label>
+            </Grid>
+            <Grid Grid.Column="5">
+                <ComboBox Name="ICAP_XRESOLUTION"  Width="60" Height="20" Foreground="Black" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            </Grid>
+
+            <Grid Grid.Column="6">
+                <Label VerticalAlignment="Center" Foreground="Black">黑白阈值</Label>
+            </Grid>
+            <Grid Grid.Column="7">
+                <ComboBox Name="ICAP_THRESHOLD"  Width="60" Height="20" Foreground="Black" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="2">
+                <Label VerticalAlignment="Center" Foreground="Black">像素类型</Label>
+            </Grid>
+            <Grid Grid.Column="3">
+                <ComboBox Name="ICAP_PixelType" SelectionChanged="ComboBox_SelectionChanged"  Width="60" Height="20" Foreground="Black"></ComboBox>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Label Foreground="Black" VerticalAlignment="Center">传输模式</Label>
+            </Grid>
+            <Grid Grid.Column="1">
+                <ComboBox Name="ICAP_IXferMech" SelectionChanged="ComboBox_SelectionChanged" Width="60" Height="20" Foreground="Black"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="6">
+                <Label VerticalAlignment="Center" Foreground="Black">压缩算法</Label>
+            </Grid>
+            <Grid Grid.Column="7">
+                <ComboBox Name="ICAP_COMPRESSION" SelectionChanged="ComboBox_SelectionChanged" Width="60" Height="20" Foreground="Black"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="4">
+                <Label VerticalAlignment="Center" Foreground="Black">文件格式</Label>
+            </Grid>
+            <Grid Grid.Column="5">
+                <ComboBox Name="ICAP_IMAGEFILEFORMAT"  Width="60" Height="20" Foreground="Black" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <CheckBox Height="15" Name="CAP_DUPLEXENABLED" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" Width="67" Foreground="Black" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked">双面扫描</CheckBox>
+            </Grid>
+            <Grid Grid.Column="6">
+                <CheckBox Name="ICAP_PIXELFLAVOR" HorizontalAlignment="Center" 
+                          VerticalAlignment="Center" Foreground="Black" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked">反色</CheckBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <CheckBox Name="ICAP_AUTOMATICDESKEW" HorizontalAlignment="Center" 
+                          VerticalAlignment="Center" Foreground="Black" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked">自动纠偏</CheckBox>
+            </Grid>
+            <Grid Grid.Column="2">
+                <CheckBox Name="ICAP_AUTOMATICBORDERDETECTION" HorizontalAlignment="Center" 
+                          VerticalAlignment="Center" Foreground="Black" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked">自动去黑边</CheckBox>
+            </Grid>
+            <Grid Grid.Column="3">
+                <CheckBox Height="15" Name="ICAP_AUTODISCARDBLANKPAGES" Checked="ICAP_AUTODISCARDBLANKPAGES_Checked" 
+                          HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Unchecked="ICAP_AUTODISCARDBLANKPAGES_Unchecked">空白页阈值</CheckBox>
+            </Grid>
+
+            <Grid Grid.Column="4">
+                <TextBox Name="BlankImageThreshold" Margin="0,10" PreviewTextInput="BlankImageThreshold_PreviewTextInput"  
+                         TextChanged="BlankImageThreshold_TextChanged" IsEnabled="False" LostFocus="BlankImageThreshold_LostFocus">0</TextBox>
+            </Grid>
+            <Grid Grid.Column="5">
+                <TextBlock Height="15" HorizontalAlignment="Left">KB</TextBlock>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Label VerticalAlignment="Center" Foreground="Black">进纸器类型</Label>
+            </Grid>
+            <Grid Grid.Column="1">
+                <ComboBox Name="ECAP_PAPERSOURCE"  Width="80" Height="20" Foreground="Black" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Button Name="Save" Click="Save_Click"  Width="75" Height="25" HorizontalAlignment="Right" Foreground="Black">保存</Button>
+            </Grid>
+            <Grid Grid.Column="4">
+                <Button Name="Cancel" Click="Cancel_Click" Width="75" Height="25" HorizontalAlignment="Right" Foreground="Black">退出</Button>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

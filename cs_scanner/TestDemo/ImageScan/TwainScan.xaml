@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="UFileClient.Twain.TwainScan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="100" Width="400" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <Label Margin="10,9,12,13" Name="SelectSrc" Height="30">选择扫描仪</Label>
+            <ComboBox Grid.Column="1" Name="DataSrc" Width="250" Height="30" HorizontalAlignment="Right" SelectionChanged="DataSrc_SelectionChanged" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Name="Setting" Click="Setting_Click" Margin="12,6,6,14">参数设置</Button>
+            <Button Grid.Column="2" Name="Scan" Click="Scan_Click" Margin="8,6,9,14">扫描</Button>
+            <Button Grid.Column="3" Name="Cancel" Click="Cancel_Click" Margin="10,6,6,14">退出</Button>
+            <CheckBox Margin="0,14.156,94,19.844" Name="UISelected" Grid.ColumnSpan="2">扫描仪定制界面</CheckBox>
+        </Grid>
+
+    </Grid>
+</UserControl>

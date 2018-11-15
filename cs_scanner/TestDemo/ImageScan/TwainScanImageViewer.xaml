@@ -1,0 +1,26 @@
+﻿<Window x:Class="UFileClient.Twain.ScanImageViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="扫描中..."
+    WindowStartupLocation="CenterScreen" 
+        Unloaded="Window_Unloaded"
+    Height="91" Width="473" WindowStyle="ToolWindow">
+
+    <Grid Margin="10" Name="PhotoViewerLayout" Height="41" Width="438">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="Auto" MinHeight="32" />
+        </Grid.RowDefinitions>
+
+        <!-- 按钮 -->
+        <Border Grid.Column="0" Grid.Row="1" Padding="4">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Height="23" Name="buttonControl" Width="408" HorizontalAlignment="Center"  Foreground="Black" >正在启动文件传输，请稍候……</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
+

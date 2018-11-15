@@ -1,0 +1,11 @@
+﻿<Window x:Class="FMPTestClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TestDemo" Height="359.2" Width="475.4" Background="AliceBlue" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" >
+    <Grid>
+        <Button Content="退出" Height="33" HorizontalAlignment="Left" Margin="172,203,0,0" Name="buttonQuit" VerticalAlignment="Top" Width="105" Click="ButtonQuit_Click" TabIndex="16" />
+        <Button Content="扫描" HorizontalAlignment="Left" Margin="172,138,0,0" VerticalAlignment="Top" Width="105" Height="35" Click="ButtonScan_Click"/>
+        <Button Content="上传展示" HorizontalAlignment="Left" Margin="172,75,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="-0.372,0.088" Height="32" Click="buttonUploadDisplay_Click"/>
+    </Grid>
+</Window>
+
