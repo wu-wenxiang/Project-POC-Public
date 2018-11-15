@@ -1,0 +1,2 @@
+- `cl /Zi twaintestlib.cpp /link dbghelp.lib  /DLL /OUT:twaintestlib.dll`
+- `symchk.exe C:\Windows\twain_32.dll /oc C:\Debugger64\test`
