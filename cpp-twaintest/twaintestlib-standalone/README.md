@@ -1,0 +1,2 @@
+- `cl /Zi twaintestlib.cpp /link dbghelp.lib`
+- copy symbol
